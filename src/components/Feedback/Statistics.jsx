@@ -1,15 +1,16 @@
 import PropTypes from "prop-types";
+import { ListStatistics, ItemStatistics } from './Feadback.styled'
 
 export const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
     <>
     <h2>Statistics</h2>
-        <ul>
-          <li>Good: {good}</li>
-          <li>Neutral: {neutral}</li>
-          <li>Bad: {bad}</li>
-          <li>Total: {total()}</li>
-          <li>Positive feedback: {positivePercentage()}%</li>
-        </ul>
+        <ListStatistics>
+          <ItemStatistics>Good: {good}</ItemStatistics>
+          <ItemStatistics>Neutral: {neutral}</ItemStatistics>
+          <ItemStatistics>Bad: {bad}</ItemStatistics>
+          <ItemStatistics>Total: {total()}</ItemStatistics>
+          <ItemStatistics>Positive feedback: {positivePercentage()}%</ItemStatistics>
+        </ListStatistics>
     </>
 )
 
